@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        app:autoTransition="animateToEnd"
+        app:constraintSetStart="@+id/start"
+        app:duration="1000" />
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:id="@+id/file_name_value_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_16"
+            android:scaleX="0"
+            android:scaleY="0"
+            android:visibility="invisible"
+            app:layout_constraintBaseline_toBaselineOf="@+id/file_name_label_tv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/file_name_label_tv" />
+
+        <Constraint
+            android:id="@+id/download_status_value_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:scaleX="0"
+            android:scaleY="0"
+            android:visibility="invisible"
+            app:layout_constraintBaseline_toBaselineOf="@+id/download_status_label_tv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/file_name_label_tv" />
+
+        <Constraint
+            android:id="@+id/ok_button"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_60"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="parent" />
+    </ConstraintSet>
+
+</MotionScene>
